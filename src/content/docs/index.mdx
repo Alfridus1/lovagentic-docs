@@ -1,0 +1,61 @@
+---
+title: lovagentic
+description: Agentic CLI for Lovable.dev — ship Lovable apps from your terminal.
+template: splash
+hero:
+  tagline: Agentic CLI for Lovable.dev — ship Lovable apps from your terminal, your CI pipeline, or any AI agent.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Get started
+      link: /start/install
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/Alfridus1/lovagentic
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Why lovagentic
+
+<CardGrid stagger>
+  <Card title="Terminal-first" icon="laptop">
+    The full Lovable surface: list, create, prompt, chat, publish, verify, Lighthouse audits — all from one binary.
+  </Card>
+  <Card title="Agent-ready" icon="rocket">
+    Designed for AI agents. Browser-first today, MCP-native in v0.2.
+  </Card>
+  <Card title="CI-ready" icon="setting">
+    Headless mode, JSON output, `process.exitCode` semantics. Drop it into GitHub Actions in ten lines.
+  </Card>
+  <Card title="Open source" icon="approve-check">
+    MIT-licensed, no API key required, no vendor lock. Works on every Lovable tier.
+  </Card>
+</CardGrid>
+
+## Install
+
+```bash
+npm install -g lovagentic
+lovagentic doctor --self-heal
+```
+
+`--self-heal` auto-imports your Lovable desktop session into the CLI profile so you don't need to log in twice.
+
+## First prompt
+
+```bash
+lovagentic create --prompt "Simple todo app with dark mode" --name todos
+lovagentic publish --id <project-id>
+```
+
+That's it. Thirty seconds to a live URL.
+
+## What's next
+
+- [**Install & first run**](/start/install) — zero to live URL
+- [**Driving Lovable from scripts**](/guides/scripting) — build, iterate, ship
+- [**CI/CD with GitHub Actions**](/guides/ci) — preview gates on every PR
+- [**AI agent integration**](/guides/mcp) — expose lovagentic to Claude, Cursor, Codex
